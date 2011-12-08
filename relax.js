@@ -1,3 +1,8 @@
+/*
+ * Author: Daniel Alabi
+ * relax.js
+ */
+
 (function($) {
   $.fn.relax = function(inprops) {
 
