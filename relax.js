@@ -177,21 +177,3 @@ $(function() {
 function log(what) {
     console.log(what);
 }
-/*
- * Rules for programming:
- * try to take as little as much time and code
- * to accomplish things.
- * Be fast yet detailed as you accomplish your basic and most necessary
- * things to complete the applications.
- * Continue to code until it can be called an accordion and differentiated
- * from all the other ones.
- * It should be differentiated by the function it does (and differently) and
- * not just by the name. May God, your heavenly father, help you!!
- * Now, let the hacking begin. 
- * That's when you eat! Concentrate and don't look at the time that much.
- */
-/*bugs: you can drag to an element that you don't want to drag to.
- * You can drag from one inner to an outer but you can drag from an outer
- * ul to an inner one.
- * 
- */
