@@ -10,11 +10,12 @@ on your unix/linux command line.
 
 To use relax accordion, you need three core js files to power this 
 accordion:
-i) jquery -- the new wave javascript library.
+
+* jquery -- the new wave javascript library.
 The other two `.js` files depend on this.
-ii) relax.js -- javascript file containing the implementation of the relax
+* relax.js -- javascript file containing the implementation of the relax
                accordion.
-iii) jquery.draggable.droppable.custom.min.js -- it contains the draggable
+* jquery.draggable.droppable.custom.min.js -- it contains the draggable
 and droppable jquery ui libraries.
 
 If you are going to use any more of the jquery ui libraries, I'd advise
@@ -22,18 +23,27 @@ that you just download and include the jquery ui libraries you'd use
 with your application together with relax.js. If you do that then you 
 wouldn't have to include (iii) anymore. But make sure that you have both
 the draggable and droppable jquery ui libraries coupled with your downloads.
+
 Download jquery ui libraries [here](http://www.jqueryui.com/download).
 
 After downloading (i), (ii), (iii), you can include these files in your
 html file like this (and preferably in this order):
-`<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="jquery.
-<script type="text/javascript" src="relax.js"></script>
-<script type="text/javascript" src="jquery.draggable.droppable.custom.min.js"
-></script>
-<script type="text/javascript" src="myscript.js"></script>`
+
+
+`<script type="text/javascript" src="jquery.js"></script>`
+
+`<script type="text/javascript" src="jquery.`
+
+`<script type="text/javascript" src="relax.js"></script>`
+
+`<script type="text/javascript" src="jquery.draggable.droppable.custom.min.js"
+></script>`
+`<script type="text/javascript" src="myscript.js"></script>`
+
 Then you can call the relax plugin in your own script like this:
+
 `$("ul.menu").relax();`
+
 The selector `ul.menu` specifies the list where the relax function will
 act upon and make a RELAX accordion.
 
@@ -42,16 +52,17 @@ Usage
 
 The `.relax()` function takes in an object that you could use to specify
 some options for the relax accordion:
-`
-// default values
-$("ul.menu") .relax({
-"animate" : "fast",
-"activate-links" : false, // or "deactivate-links" : true
-"openondrag" : false,
-ondrop: function() {}, // or null
-opacity: 0.7
-});
-`
+
+`// default values`
+`$("ul.menu") .relax({`
+`"animate" : "fast",`
+`"activate-links" : false, // or "deactivate-links" : true`
+`"openondrag" : false,`
+`ondrop: function() {}, // or null`
+`opacity: 0.7`
+`});`
+
+
 `animate` option specifies how fast the accordion menus should slide up
 or slide down.
 Available options: "fast", "slow", "normal".
@@ -67,6 +78,7 @@ then whenever you start to drag an `<li>` from one container to another,
 
 `ondrop` is a callback that will be called whenever an `<li>` is moved
 from one sublist to another.
+
 For example:
 `ondrop: function(dropped, into, contained) {
                 log("I am ");
@@ -78,7 +90,9 @@ For example:
 }
 `dropped` is the last list item (`<li>`) that was dropped before the
 ondrop callback was called.
+
 `into` is the list `<ul>` into which `dropped` was dropped into.
+
 `contained` is the container/menu that encapsulates both `dropped` and
 `into`.
 
@@ -86,6 +100,7 @@ Examples
 --------
 Examples of usage of `relax.js` are at `http://vidmuster.com`. Check out 
 these ones:
+
 1. Two sortable accordion menus. One uses `<a>` elements and the other
    uses `<p>` elements in the accordion tabs.
    [Example 1](http://vidmuster.com/tests/relax1.html).
