@@ -109,10 +109,7 @@ these ones:
 
 Feedback, Bugs, Suggestions
 ---------------------------
-I really need your feedback to improve `relax.js` and make it cooler.
-Please send your feedback and comments to my email here:
-[alabidan@gmail.com](mailto:alabidan@gmail.com).
-Also report bugs to me by issue (github feature). I'll be happy to hear
-from you. Thanks for using this jquery plugin.
+I'd really like your feedback, comments, and bug reports sent to me
+somehow preferably by filing an issue (github feature).
 
 
