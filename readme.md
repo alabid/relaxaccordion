@@ -100,12 +100,12 @@ these ones:
 
 1. Two sortable accordion menus. One uses `<a>` elements and the other
    uses `<p>` elements in the accordion tabs.
-   [Example 1](http://vidmuster.com/tests/relax1.html).
+   [Example 1](http://vidmuster.com/ra-tests/relax1.html).
    
 2. Two sortable accordion menus that communicate with each other. You can 
    drag from one menu to the other and also specifiy callbacks that will
    execute just immediately after you're done moving an `<li>`.
-   [Example 2](http://vidmuster.com/tests/relax2.html).
+   [Example 2](http://vidmuster.com/ra-tests/relax2.html).
 
 Feedback, Bugs, Suggestions
 ---------------------------
