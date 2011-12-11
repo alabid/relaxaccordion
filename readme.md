@@ -76,14 +76,15 @@ then whenever you start to drag an `<li>` from one container to another,
 from one sublist to another.
 
 For example:
-       ondrop: function(dropped, into, contained) {
-                log("I am ");
-                log(dropped);
-                log("dropped into ");
-                log(into);
-                log("in this menu: ");
-                log(contained);
-	}
+
+    ondrop: function(dropped, into, contained) {
+             log("I am ");
+             log(dropped);
+             log("dropped into ");
+             log(into);
+             log("in this menu: ");
+             log(contained);
+	     }
 
 `dropped` is the last list item (`<li>`) that was dropped before the
 ondrop callback was called.
