@@ -30,15 +30,11 @@ After downloading (i), (ii), (iii), you can include these files in your
 html file like this (and preferably in this order):
 
 
-`<script type="text/javascript" src="jquery.js"></script>`
-
-`<script type="text/javascript" src="jquery.`
-
-`<script type="text/javascript" src="relax.js"></script>`
-
-`<script type="text/javascript" src="jquery.draggable.droppable.custom.min.js"
-></script>`
-`<script type="text/javascript" src="myscript.js"></script>`
+      <script type="text/javascript" src="jquery.js"></script>
+      <script type="text/javascript" src="relax.js"></script>
+      <script type="text/javascript" src="jquery.draggable.droppable.custom.min.js"
+></script>
+	<script type="text/javascript" src="myscript.js"></script>
 
 Then you can call the relax plugin in your own script like this:
 
@@ -53,14 +49,14 @@ Usage
 The `.relax()` function takes in an object that you could use to specify
 some options for the relax accordion:
 
-`// default values`
-`$("ul.menu") .relax({`
-`"animate" : "fast",`
-`"activate-links" : false, // or "deactivate-links" : true`
-`"openondrag" : false,`
-`ondrop: function() {}, // or null`
-`opacity: 0.7`
-`});`
+     // default values
+     $("ul.menu") .relax({
+     "animate" : "fast",
+     "activate-links" : false, // or "deactivate-links" : true
+     "openondrag" : false,
+     ondrop: function() {}, // or null
+     opacity: 0.7
+     });
 
 
 `animate` option specifies how fast the accordion menus should slide up
@@ -80,14 +76,15 @@ then whenever you start to drag an `<li>` from one container to another,
 from one sublist to another.
 
 For example:
-`ondrop: function(dropped, into, contained) {
+       ondrop: function(dropped, into, contained) {
                 log("I am ");
                 log(dropped);
                 log("dropped into ");
                 log(into);
                 log("in this menu: ");
                 log(contained);
-}
+	}
+
 `dropped` is the last list item (`<li>`) that was dropped before the
 ondrop callback was called.
 
