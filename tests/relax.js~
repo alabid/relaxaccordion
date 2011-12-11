@@ -1,13 +1,10 @@
 /*
  * Author: Daniel Alabi
  * relax.js
- * The finest accordion everout!
  */
 
 (function($) {
-     $.fn.relax = function(inprops) {
-	if ($(this).length == 0)
-	    return;
+  $.fn.relax = function(inprops) {
 
         var dProps = {
                     animate: "fast",
@@ -21,26 +18,21 @@
         relaxClass,
         props = $.extend(dProps, inprops);
 
-            if ($(this).attr("class") == undefined 
-	       || $(this).attr("class") == "") {
-               relax = $("body").find("ul.ra-menu");
+            if ($(this).length == 0 ||
+		!$(this).attr("class")) {
+               relax = $("body").find("ul.menu");
 	       if (relax.length == 0) {
-		   return;
+		   return null;
 	       }
 	    } else {
-		relax = $(this);
-		if (relax.attr("class"))
-		    relaxClass = relax.attr("class").split(" ")[0];
-		else  {
-		    relaxClass = "ra-menu";
-		    relax.addClass("ra-menu");
-		}
+	        relax = $(this);
+		relaxClass = $(this).attr("class");
 		insideLiType = getNodeName($(this)
 					   .children("li")
 					   .children(":first"));
             }
             var no = relax.length;
-	    
+      
 	    if (no > 0) {
               var alluls = (function() {
                  return relax.add($("ul." + relaxClass)
@@ -57,9 +49,9 @@
                 });
              });	  
 	   }
-
-           var smalluls = attachChildClassNames(makeKidsSortable(alluls, props,relaxClass, relax), relaxClass);
-
+          
+           var smalluls = attachChildClassNames(makeKidsSortable(alluls, props,relaxClass),
+						relaxClass);
            // will need smalluls soon
            relax.find("li>"+insideLiType).each(function() {
             var ul = $(this).next().hide();
@@ -78,14 +70,12 @@
   };
 
  function attachChildClassNames(alluls, relaxClass) {
-
      var sName = "small-ul";
      return alluls.not("ul."+ relaxClass).each(function() {
 	  $(this).addClass(sName);
       });    
  }
-   function makeKidsSortable(alluls, props, relaxClass, relax) {
-
+   function makeKidsSortable(alluls, props, relaxClass) {
     return alluls.each(function() {
          $(this).sortable({
           connectWith: "ul."+relaxClass + ", ul." + relaxClass + " ul.small-ul",
@@ -103,11 +93,8 @@
 		alluls.find("."+relaxClass).append(ui.item);
 	    }
 	    ui.item.children(relaxClass).removeClass("drag");
-            if (props.ondrop ) {
-		props.ondrop.call(ui.item, 
-				  ui.item, 
-				  ui.item.parent(),
-				 relax);
+            if (props.ondrop) {
+		props.ondrop.call(ui.item, ui.item, ui.item.parent());
 	    }
           } ,
 	  opacity: props.opacity || 0.7,
@@ -173,6 +160,31 @@
      });
  }
 })(jQuery);
+
+
+
+
+$(function() {
+   $().relax({
+     // by default all header links are not activated but are just headers
+     // that can be moved.
+     // on the other hand, by default the links below the headers
+     // can only be moved. If you want to be able to click on it,
+     //	make it happen using this:
+     // "activate-links" : true; or "deactivate-links" : false
+     ondrop: function(dropped, on) {
+	 log("I");
+	 log(dropped);
+	 log(" was dropped on ");
+	 log(on);
+	 log("I'm this: ");
+	 log($(this));
+     },
+     openondrag: true, 
+     opacity: 0.7 /* must be between 0.1 and 1 */
+   });
+});
+
 
 function log(what) {
     console.log(what);

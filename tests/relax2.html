@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!---You should use ra for relax-accordion while developing to 
+  reduce the amount of typing that you'll have to do! -->
+<html>
+<head>
+<title>Testing Relax Accordion!!</title>
+<link rel="stylesheet" href="relax2.css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery-draggable-droppable.custom.min.js">
+</script>
+<script type="text/javascript" src="relax.js"></script>
+<script type="text/javascript">
+$(function() {
+  $("ul.menu").relax({
+      ondrop: function(dropped, into, big) {
+              if (into.hasClass("small-ul")) {
+                $("div#drop-result").html("You dropped " +
+                  dropped.children(":first").text() + 
+                   " into " + into.parent().children(":first").text());
+              } else if (into.hasClass("menu")){
+                  $("div#drop-result").html("You dropped " +
+                  dropped.children(":first").text() + 
+                   " into the big contaniner with class, " 
+                  + big.attr("class"));
+              }
+            },
+      opacity: 0.9
+  });
+});
+</script>
+</head>
+<body>
+  <div class="before-accordion">
+    <p>This is the text that's before the accordion.</p>
+  </div>
+
+    <ul class="menu">
+      <li>
+	<a class="m1" href="#">Weblog Tools</a>
+	<ul>
+	  <li><a href="http://www.pivotx.net/">PivotX</a></li>
+	  <li><a href="http://www.wordpress.org/">WordPress</a></li>
+	  <li><a href="http://www.textpattern.com/">Textpattern</a></li>
+	  <li><a href="http://typosphere.org/">Typo</a></li>
+	</ul>
+      </li>
+      <li>
+	<a class="m2" href="#">Programming Languages</a>
+	<ul>
+	  <li><a href="http://www.php.net/">PHP</a></li>
+	  <li><a href="http://www.ruby-lang.org/en/">Ruby</a></li>
+	  <li><a href="http://www.python.org/">Python</a></li>
+	  <li><a href="http://www.perl.org/">PERL</a></li>
+	  <li><a href="http://java.sun.com/">Java</a></li>
+	  <li><a href="http://en.wikipedia.org/wiki/C_Sharp">C#</a></li>
+	</ul>
+      </li>
+      <li><a class="m3" href="http://www.i-marco.nl/weblog/">Marco's blog (no submenu)</a></li>
+<li>
+  <a class="m4" href="#">Cool Stuff</a>
+  <ul>
+    <li><a href="http://www.apple.com/">Apple</a></li>
+    <li><a href="http://www.nikon.com/">Nikon</a></li>
+    <li><a href="http://www.xbox.com/en-US/">XBOX360</a></li>
+    <li><a href="http://www.nintendo.com/">Nintendo</a></li>
+</ul>
+</li>
+      <li>
+	<a class="m5" href="#">Search Engines</a>
+	<ul>
+	  <li><a href="http://search.yahoo.com/">Yahoo!</a></li>
+	  <li><a href="http://www.google.com/">Google</a></li>
+	  <li><a href="http://www.ask.com/">Ask.com</a></li>
+	  <li><a href="http://www.live.com/?searchonly=true">Live Search</a></li>
+	</ul>
+      </li>
+</ul> 
+ 
+
+    <ul class="menu">
+      <li>
+	<a class="m1" href="#">Daniel's Tools</a>
+	<ul>
+	  <li><a href="http://www.pivotx.net/">PivotY</a></li>
+	  <li><a href="http://www.wordpress.org/">Daniel chilling</a></li>
+	  <li><a href="http://www.textpattern.com/">Daniel's Textpattern</a></li>
+	  <li><a href="http://typosphere.org/">Typo in here</a></li>
+	</ul>
+      </li>
+      <li>
+	<a class="m2" href="#">Programming Languages 1</a>
+	<ul>
+	  <li><a href="http://www.php.net/">PHP love</a></li>
+	  <li><a href="http://www.ruby-lang.org/en/">Ruby</a></li>
+	  <li><a href="http://www.python.org/">Python</a></li>
+	  <li><a href="http://www.perl.org/">PERL</a></li>
+	  <li><a href="http://java.sun.com/">Java</a></li>
+	  <li><a href="http://en.wikipedia.org/wiki/C_Sharp">C# and you</a></li>
+	</ul>
+      </li>
+      <li><a class="m3" href="http://www.i-marco.nl/weblog/">Marco's blog (no submenu)</a></li>
+<li>
+  <a class="m4" href="#">Cool Stuff</a>
+  <ul>
+    <li><a href="http://www.apple.com/">Apple</a></li>
+    <li><a href="http://www.nikon.com/">Nikon</a></li>
+    <li><a href="http://www.xbox.com/en-US/">XBOX360</a></li>
+    <li><a href="http://www.nintendo.com/">Nintendo</a></li>
+</ul>
+</li>
+      <li>
+	<a class="m5" href="#">Search Engines ya'l use</a>
+	<ul>
+	  <li><a href="http://search.yahoo.com/">Yahoo! for me</a></li>
+	  <li><a href="http://www.google.com/">Google for all</a></li>
+	  <li><a href="http://www.ask.com/">Ask.com for me</a></li>
+	  <li><a href="http://www.live.com/?searchonly=true">Live Search for ya'l</a></li>
+	</ul>
+      </li>
+</ul>
+<div id="drop-result">
+  
+</div>
+</body>
+</html>

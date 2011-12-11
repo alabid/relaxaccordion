@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!---You should use ra for relax-accordion while developing to 
+  reduce the amount of typing that you'll have to do! -->
+<html>
+<head>
+<title>Testing Relax Accordion!!</title>
+<link rel="stylesheet" href="relax1.css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery-draggable-droppable.custom.min.js">
+</script>
+<script type="text/javascript" src="relax.js">
+</script>
+<script type="text/javascript">
+<!-- my own inline javascript -->
+$(function() {
+  $("ul.menu").relax();
+  $("ul.menu2").relax(); // has no links just p's
+});
+</script>
+
+</head>
+<body>
+
+  <div class="header">
+    <h2>Single Simple Sortable Relax Accordion With Embedded links</h2>
+    <p>This example uses anchor tags within the accordion for navigation and selection</p>
+  </div>
+  <ul class="menu">
+    <li>
+      <a class="m1" href="#">Weblog Tools</a>
+      <ul>
+	<li><a href="http://www.pivotx.net/">PivotX</a></li>
+	<li><a href="http://www.wordpress.org/">WordPress</a></li>
+	<li><a href="http://www.textpattern.com/">Textpattern</a></li>
+	<li><a href="http://typosphere.org/">Typo</a></li>
+      </ul>
+    </li>
+    <li>
+      <a class="m2" href="#">Programming Languages</a>
+      <ul>
+	<li><a href="http://www.php.net/">PHP</a></li>
+	<li><a href="http://www.ruby-lang.org/en/">Ruby</a></li>
+	<li><a href="http://www.python.org/">Python</a></li>
+	<li><a href="http://www.perl.org/">PERL</a></li>
+	<li><a href="http://java.sun.com/">Java</a></li>
+	<li><a href="http://en.wikipedia.org/wiki/C_Sharp">C#</a></li>
+      </ul>
+    </li>
+    <li><a href="http://alabidan.wordpress.com"> Daniel's blog (no submenu)</a></li>
+    <li>
+      <a href="#">Cool Stuff</a>
+      <ul>
+	<li><a href="http://www.apple.com/">Apple</a></li>
+	<li><a href="http://www.nikon.com/">Nikon</a></li>
+	<li><a href="http://www.xbox.com/en-US/">XBOX360</a></li>
+	<li><a href="http://www.nintendo.com/">Nintendo</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">Search Engines</a>
+      <ul>
+	<li><a href="http://search.yahoo.com/">Yahoo!</a></li>
+	<li><a href="http://www.google.com/">Google</a></li>
+	<li><a href="http://www.ask.com/">Ask.com</a></li>
+	<li><a href="http://www.live.com/?searchonly=true">Live Search</a></li>
+      </ul>
+    </li>
+  </ul> 
+
+  <div class="header" style="float:left;clear:both">
+    <h2>Single Simple Sortable Relax Accordion Without links</h2>
+    <p>This example uses p tags instead of a to label the accordion tabs</p>
+  <ul class="menu2">
+    <li>
+      <p class="m1">Weblog Tools</p>
+      <ul>
+	<li><p>PivotX</p></li>
+	<li><p>WordPress</p></li>
+	<li><p>Textpattern</p></li>
+	<li><p>Typo</p></li>
+      </ul>
+    </li>
+    <li>
+      <p>Programming Languages</p>
+      <ul>
+	<li><p>PHP</p></li>
+	<li><p>Ruby</p></li>
+	<li><p>Python</p></li>
+	<li><p>PERL</p></li>
+	<li><p>Java</p></li>
+	<li><p>C#</p></li>
+      </ul>
+    </li>
+    <li><p> Daniel's blog (no submenu)</p></li>
+    <li>
+      <p href="#">Cool Stuff</p>
+      <ul>
+	<li><p>Apple</p></li>
+	<li><p>Nikon</p></li>
+	<li><p>XBOX360</p></li>
+	<li><p>Nintendo</p></li>
+      </ul>
+    </li>
+    <li>
+     <p href="#">Search Engines</p>
+      <ul>
+	<li><p>Yahoo!</p></li>
+	<li><p>Google</p></li>
+	<li><p>Ask.com</p></li>
+	<li><p>Live Search</p></li>
+      </ul>
+    </li>
+  </ul> 
+</body>
+</html>
