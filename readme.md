@@ -31,8 +31,7 @@ html file like this (and preferably in this order):
 
 
       <script type="text/javascript" src="jquery.js"></script>
-      <script type="text/javascript" src="jquery.draggable.droppable.custom.min.js"
-></script>
+      <script type="text/javascript" src="jquery.draggable.droppable.custom.min.js"></script>
       <script type="text/javascript" src="relax.js"></script>
 	<script type="text/javascript" src="myscript.js"></script>
 
